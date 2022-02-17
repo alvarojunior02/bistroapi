@@ -1,8 +1,17 @@
-import express, { Router } from "express";
-import RecipeController from "./controllers/RecipeController";
-import ProductController from "./controllers/ProductController";
+import express, { Router } from "express"
+import RecipeController from "./controllers/RecipeController"
+import ProductController from "./controllers/ProductController"
+import cors from 'cors'
 
 const router = express.Router();
+
+const corsOptions = {
+    origin: '*', 
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    maxAge: 3600,
+    credentials: true,
+    allowedHeaders: ['Content-Type'],
+}
 
 router.get('/', (req, res) => {})
 
@@ -23,7 +32,7 @@ router.delete('/recipes/:id', RecipeController.destroy)
 
 router.post('/products', ProductController.create)
 
-router.get('/products', ProductController.findAll)
+router.get('/products', cors(corsOptions), ProductController.findAll)
 
 router.get('/products/:id', ProductController.findOne)
 
