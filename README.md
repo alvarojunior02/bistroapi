@@ -12,6 +12,19 @@ Aplicação Back-end desenvolvida do zero para realizar o controle de requisiç�
   <li>TypeScript.</li>
 </ul>
 
+## Como rodar localmente: 
+  <ol>
+    <li>Ter o node e yarn instalados;</li>
+    <li>Clonar o projeto em sua máquina;</li>
+    <li>Abrir o prompt de comandos de sua preferencia e rodar "yarn" na raiz da pasta clonada; </li>
+    <li>Em seguida, no prompt, rodar "yarn start", na mesma pasta. </li>
+  </ol>
+  <br />
+  Obs: em seguida, baixe o sistema web, para ver a api funcionando e trabalhando com requisições e respostas para o front-end:
+  <br />
+  <a href="https://github.com/alvarojunior02/bistroweb">Repositório do SMG Bistrô Web </a>
+
+
 ## Documentação
 
 Rotas básicas: 
