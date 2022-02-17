@@ -4,18 +4,16 @@ import router from './routes'
 
 const app = express()
 
-const corsOptions = {
-    origin: '*', 
-    methods: "GET,PUT,POST,DELETE"
-}
+const allowedOrigins = ['http://localhost:3000'];
+
+const options: cors.CorsOptions = {
+  origin: allowedOrigins
+};
+
+app.use(cors(options));
 
 app.use(express.json());
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
-    app.use(cors());
-    next();
-});
+app.use(express.json());
 app.use(router);
 
 export { app }
