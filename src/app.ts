@@ -1,11 +1,16 @@
 import express from 'express'
-const cors = require('cors');
+import cors from 'cors'
 import router from './routes'
 
 const app = express()
 
+const corsOptions = {
+    origin: '*', 
+    methods: "GET,PUT,POST,DELETE"
+}
+
 app.use(express.json())
-app.use(cors({origin: '*', methods: "GET,PUT,POST,DELETE"}));
+app.use(cors(corsOptions));
 app.use(router);
 
 export { app }
