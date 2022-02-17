@@ -33,6 +33,6 @@ Rotas básicas:
   - "/recipes/:id" (tipo GET) -> Retorna os dados de uma receita específica, de acordo com ID fornecido;
   - "/recipes/title/:title" (tipo GET) -> Retorna os dados de uma receita específica, de acordo com o Título exato fornecido;
   - "/recipes" (tipo POST) -> Insere uma nova receita;
-  - "/recipes/:id" (tipo PUT) -> Altera o produto existente;
-  - "/recipes/:id" (tipo DELETE) -> Deleta o produto.
+  - "/recipes/:id" (tipo PUT) -> Altera a receita existente;
+  - "/recipes/:id" (tipo DELETE) -> Deleta a receita.
 
