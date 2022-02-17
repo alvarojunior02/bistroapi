@@ -1,7 +1,7 @@
 import { app } from "./app"
 import database from "./database/db"
 
-const port = 3333
+const port = process.env.PORT || 3333
 
 const server = app.listen(port, async () => {
     await database.sync();
