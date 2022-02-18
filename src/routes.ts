@@ -5,6 +5,12 @@ import cors from 'cors'
 
 const router = express.Router();
 
+router.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Content-Type: application/json");
+    next();
+});
+
 router.get('/', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.send({message: "Welcome to SMG Bistro API"})
