@@ -13,7 +13,10 @@ const corsOptions = {
     allowedHeaders: ['Content-Type'],
 }
 
-router.get('/', (req, res) => {})
+router.get('/', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.send({message: "Welcome to SMG Bistro API"})
+})
 
 // CRUD for Recipes
 router.post('/recipes', RecipeController.create)
