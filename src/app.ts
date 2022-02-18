@@ -9,7 +9,6 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"],
     maxAge: 3600,
     credentials: true,
-    allowedHeaders: ['Content-Type'],
 }));
 app.use(express.json())
 app.use(router);
