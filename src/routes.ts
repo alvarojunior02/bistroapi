@@ -32,7 +32,7 @@ router.delete('/recipes/:id', RecipeController.destroy)
 
 router.post('/products', ProductController.create)
 
-router.get('/products', cors(corsOptions), ProductController.findAll)
+router.get('/products', ProductController.findAll)
 
 router.get('/products/:id', ProductController.findOne)
 

@@ -5,6 +5,8 @@ class ProductController {
     async findAll(req: Request, res: Response) {
         const recipes = await ProductModel.findAll();
 
+        res.header("Access-Control-Allow-Origin", "*");
+
         return recipes.length > 0 
             ? res.status(200).json(recipes) 
             : res.status(404).json({error: 'Nada encontrado!'})
